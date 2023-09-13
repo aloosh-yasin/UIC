@@ -3,9 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
     /**
      * loading page
      */
-    
-    document.querySelector('.loading').style.display = 'none';
-    document.body.style.overflow = 'visible';
+    setTimeout(()=>{
+        document.querySelector('.loading').style.display = 'none';
+        // document.body.style.display = 'block';
+    },1000)
+    // document.querySelector('.loading').style.display = 'none';
+    // document.body.style.display = 'block';
+
+    // document.querySelector('#main').addEventListener("load", _=>{
+    //     document.querySelector('.loading').style.display = 'none';
+    //     document.body.style.display = 'block';
+    // })
     
     /**
      * navbar toggle in mobile
@@ -192,8 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 $last.style.opacity = "1"
                 $last.classList.add("animate__slideInRight");
             }
-    
-    
+
         });
     
     });
@@ -266,65 +273,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-
-window.addEventListener("scroll" , ()=>{ 
-
-    if(window.innerWidth > 768 ){
-
-        navbar.forEach((e , i)=>{
-            window.addEventListener("scroll" , ()=>{
-                navbar[i].classList.remove(`active`);
-                if(scrollY>2300){
-                    navbar[3].classList.add(`active`);
-                }else if(scrollY>1600){
-                    navbar[2].classList.add(`active`);
-                }else if(scrollY>900){
-                    navbar[1].classList.add(`active`);
-                }else if(scrollY>=0){
-                    navbar[0].classList.add(`active`);
-                } 
-            })
-        })
-
-
-    }else if (window.innerWidth < 768 && window.innerWidth > 500) {
-
-        navbar.forEach((e , i)=>{
-            window.addEventListener("scroll" , ()=>{
-                navbar[i].classList.remove(`active`);
-                if(scrollY>4100){
-                    navbar[3].classList.add(`active`);
-                }else if(scrollY>2800){
-                    navbar[2].classList.add(`active`);
-                }else if(scrollY>2000){
-                    navbar[1].classList.add(`active`);
-                }else if(scrollY>=0){
-                    navbar[0].classList.add(`active`);
-                } 
-            })
-        })
-
-    }else {
-
-        navbar.forEach((e , i)=>{
-            window.addEventListener("scroll" , ()=>{
-                navbar[i].classList.remove(`active`);
-                if(scrollY>4700){
-                    navbar[3].classList.add(`active`);
-                }else if(scrollY>3200){
-                    navbar[2].classList.add(`active`);
-                }else if(scrollY>2400){
-                    navbar[1].classList.add(`active`);
-                }else if(scrollY>=0){
-                    navbar[0].classList.add(`active`);
-                } 
-            })
-        })
-
-    }
-
-})
- 
     
     /**
      * remove nav animation from the header in bg-screen
