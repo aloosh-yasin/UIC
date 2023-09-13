@@ -5,16 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     setTimeout(()=>{
         document.querySelector('.loading').style.display = 'none';
-        // document.body.style.display = 'block';
     },1000)
-    // document.querySelector('.loading').style.display = 'none';
-    // document.body.style.display = 'block';
 
-    // document.querySelector('#main').addEventListener("load", _=>{
-    //     document.querySelector('.loading').style.display = 'none';
-    //     document.body.style.display = 'block';
-    // })
-    
+
     /**
      * navbar toggle in mobile
      */
@@ -33,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let navbar = document.querySelectorAll(`.navbar`);
     navbar.forEach((e)=>{
         e.addEventListener("click" , ()=>{
-            $dataNavbar.classList.toggle('navbar-mob');
+            $dataNavbar.classList.remove('navbar-mob');
         })
     })
     /**
@@ -242,11 +235,11 @@ document.addEventListener('DOMContentLoaded', () => {
         navbar.forEach((e , i)=>{
             window.addEventListener("scroll" , ()=>{
                 navbar[i].classList.remove(`active`);
-                if(scrollY>4100){
+                if(scrollY>5500){
                     navbar[3].classList.add(`active`);
-                }else if(scrollY>2800){
+                }else if(scrollY>3500){
                     navbar[2].classList.add(`active`);
-                }else if(scrollY>2000){
+                }else if(scrollY>2400){
                     navbar[1].classList.add(`active`);
                 }else if(scrollY>=0){
                     navbar[0].classList.add(`active`);
@@ -259,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navbar.forEach((e , i)=>{
             window.addEventListener("scroll" , ()=>{
                 navbar[i].classList.remove(`active`);
-                if(scrollY>4700){
+                if(scrollY>4800){
                     navbar[3].classList.add(`active`);
                 }else if(scrollY>3200){
                     navbar[2].classList.add(`active`);
